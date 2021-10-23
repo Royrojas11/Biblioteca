@@ -1,0 +1,135 @@
+<div class="text-center bg-primary text-white">
+    <h1> {{titulo7}} </h1>
+    <!--TITULO ENCABEZADO-->
+</div>
+
+<!--INICIO DE UNA NUEVA SECCIÓN -->
+<div class="container">
+    <div class="abs-center">
+
+        <br> <br> <br>
+
+        <!--GRILLA 1-->
+        <div class="row">
+            <div class="col-lg-6 col-sm-6  ">
+                <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->
+                <br>
+                <!--FORMULARIO DE BOOTSTRAP 5 -->
+                <form [formGroup]="contactenosForm" (ngSubmit)="enviar()" novalidate>
+                    <div class="form-row">
+                        <div class="form-group col-md-10">
+                            <!--ITEMS DEL FORMULARIO -->
+                            <label for="inputNombres">Nombres</label>
+                            <input type="Nombres" formControlName="name" class="form-control" id="inputnombres" placeholder="Nombres">
+                            <div *ngIf="contactenosForm.controls['name'].invalid && (contactenosForm.controls['name'].dirty || contactenosForm.controls['name'].touched)" class="alert alert-danger">
+                                Campo Requerido.
+                            </div>
+                        </div>
+                        <div class="form-group col-md-10">
+                            <label for="inputApellidos">Apellidos</label>
+                            <input type="Apellidos" formControlName="apell" class="form-control" id="inputApellidos" placeholder="Apellidos">
+                            <div *ngIf="contactenosForm.controls['apell'].invalid && (contactenosForm.controls['apell'].dirty || contactenosForm.controls['apell'].touched)" class="alert alert-danger">
+                                Campo Requerido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-10">
+                        <label for="inputEmail">Email</label>
+                        <!--ITEMS DEL FORMULARIO -->
+                        <input type="text" formControlName="email" class="form-control" id="inputEmail" placeholder="Email @">
+                        <div *ngIf="contactenosForm.controls['email'].invalid && (contactenosForm.controls['email'].dirty || contactenosForm.controls['email'].touched)" class="alert alert-danger">
+                            Campo Requerido.
+                        </div>
+                    </div>
+                    <div class="form-group col-md-10">
+                        <label for="inputDireccion">Dirección</label>
+                        <input type="text" formControlName="dirr" class="form-control" id="inputEmail" placeholder="Cra, Calle, N°">
+                        <div *ngIf="contactenosForm.controls['dirr'].invalid && (contactenosForm.controls['dirr'].dirty || contactenosForm.controls['dirr'].touched)" class="alert alert-danger">
+                            Campo Requerido.
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-10">
+                            <label for="inputMunicipio">Municipio</label>
+                            <!--ITEMS DEL FORMULARIO -->
+                            <select id="inputMunicipio" class="form-control">
+                                <option>...</option>
+                                <option selected>Atlantico</option>
+                                <option selected>Antioquia</option>
+                                <option selected>Arauca</option>
+                                <option selected>Bolivar</option>
+                                <option selected>Bogota</option>
+                                <!--ITEMS DEL FORMULARIO -->
+                                <option selected>Risaralda</option>
+                                <option selected>Huila</option>
+                                <option selected>Tolima</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-10">
+                            <label for="inputCity">Ciudad</label>
+                            <!--ITEMS DEL FORMULARIO -->
+                            <select id="inputCity" class="form-control">
+                                <option>...</option>
+                                <option selected>Barranquilla-Colombia</option>
+                                <option selected>Cali-Colombia</option>
+                                <option selected>Cartagena-Colombia</option>
+                                <option selected>Medellin-Colombia</option>
+                                <option selected>Bogota-Colombia</option>
+                                <!--ITEMS DEL FORMULARIO -->
+                                <option selected>Pererira-Colombia</option>
+                                <option selected>Neiva-Colombia</option>
+                                <option selected>Ibague-Colombia</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Descripcion</label>
+                            <!--ITEMS DEL FORMULARIO -->
+                            <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <!--ITEMS DEL FORMULARIO -->
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Check me out
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="contactenosForm.invalid">Enviar Solicitud</button>
+                </form>
+            </div>
+            <div class="col-lg-6 col-sm-6 ">
+                <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->
+                <img src="../../../assets/img/img12.jpeg" class="img-fluid">
+                <!--IMPORTACIÓN DE IMAGEN -->
+                <img src="../../../assets/img/img13.jpeg" class="img-fluid">
+                <!--IMPORTACIÓN DE IMAGEN -->
+                <div class="col-lg-6 col-sm-6 ">
+                    <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="ratio ratio-16x9">
+        <!--ETIQUETA DE INSERSIÓN -->
+        <!--MAPA DE GOOGLE - ETIQUETA INFRAME -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15666.301449301265!2d-74.7909976!3d10.9953899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b195f6bb10f7ede!2sCUL%20CORPORACION%20UNIVERSITARIA%20LATINOAMERICANA!5e0!3m2!1ses!2sco!4v1631663758000!5m2!1ses!2sco"
+            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+<hr>
+<div class="text-center bg-primary text-black">
+    <b>
+        <!--TEXTO EN NEGRILLA -->
+        www.bibliodigital.com.co <br>
+        Barranquilla-Colombia <br>
+        +57 - 3090875 - 3105479 <br>
+        soport@bibliodigital.com.co <br>
+        Creado por Royman Rojas
+    </b>
+</div>
